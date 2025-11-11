@@ -1,4 +1,14 @@
 services:
+
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/app
+
   db:
     image: mariadb
     restart: always
